@@ -1,9 +1,9 @@
-.clean {
+.clean() {
     margin: 0;
     padding: 0;
 }
 
-.clean-list {
+.clean-list() {
     .clean;
     list-style: none;
 }
@@ -13,4 +13,10 @@
     flex-direction: @dir;
     align-items: center;
     justify-content: center;
+}
+
+.footer-border() {
+    padding-top: 20px;
+    width: 150px;
+    border-top: 1px solid #000;
 }

@@ -1,0 +1,37 @@
+#footer {
+    padding: 30px 0 40px;
+    background-color: @primary-color;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        ul {
+            .clean-list;
+            .footer-border;
+
+            &.first-latter li::first-letter {
+                font-weight: bold;
+            }
+
+            li {
+                line-height: 1.8;
+            }
+        }
+
+        .socials {
+            .footer-border;
+            margin-left: 30%;
+
+            i {
+                margin-right: 5px;
+                font-size: 25px;
+            }
+        }
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}

@@ -1,0 +1,64 @@
+@brd-radius: 5px;
+@font-size: 14px;
+
+#steps {
+    padding: 50px 0;
+    text-align: center;
+
+    .tiles {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+
+        .tile {
+            display: flex;
+            flex-direction: column;
+            width: 28%;
+
+            .header {
+                margin-bottom: 5px;
+                padding: 10px;
+                text-align: center;
+                background-color: @primary-color;
+                border-top-left-radius: @brd-radius;
+                border-top-right-radius: @brd-radius;
+
+                h3 {
+                    text-transform: capitalize;
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                }
+            }
+
+            .content {
+                margin-bottom: 5px;
+                padding: 20px;
+                flex-grow: 1;
+                text-align: left;
+                background-color: @light-color;
+                border-bottom-left-radius: @brd-radius;
+                border-bottom-right-radius: @brd-radius;
+
+                p {
+                    margin-bottom: 8px;
+                    font-size: @font-size;
+                }
+
+                ul {
+                    .clean;
+                    padding: 20px 0 0 30px;
+                    font-size: @font-size;
+
+                    li {
+                        padding-bottom: 20px;
+                        line-height: 2px;
+                    }
+                }
+
+                .danger {
+                    color: @red-color;
+                }
+            }
+        }
+    }
+}

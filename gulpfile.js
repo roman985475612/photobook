@@ -59,11 +59,6 @@ function fonts() {
         .pipe(gulp.dest('./build/fonts'))
 }
 
-function libs() {
-    return gulp.src('./src/libs/**/*')
-        .pipe(gulp.dest('./build/libs'))
-}
-
 function watch() {
     browserSync.init({
         server: {
@@ -74,7 +69,7 @@ function watch() {
     gulp.watch('./src/less/**/*.less', style)
 }
 
-let build = gulp.parallel(html, style, script, image, imageToWebp, fonts, libs)
+let build = gulp.parallel(html, style, script, image, imageToWebp, fonts)
 let buildWithClean = gulp.series(clean, build)
 let dev = gulp.series(buildWithClean, watch)
 
